@@ -2,12 +2,10 @@
 
 /* Controllers */
 
-function PhoneListCtrl($scope, $http) {
+var PhoneListCtrl = function($scope, $http) {
   $http.get('contacts/contacts.json').success(function (data) {
     $scope.contacts = data;
   });
 
-  $scope.sortOrder = 'age';
+  $scope.sortOrder = 'id';
 }
-
-//PhoneListCtrl.$inject = ['$scope', '$http'];
