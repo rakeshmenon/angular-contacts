@@ -3,11 +3,11 @@
 /* Controllers */
 
 function PhoneListCtrl($scope, $http) {
-  $http.get('phones/phones.json').success(function(data) {
-    $scope.phones = data;
+  $http.get('contacts/contacts.json').success(function (data) {
+    $scope.contacts = data;
   });
 
-  $scope.orderProp = 'age';
+  $scope.sortOrder = 'age';
 }
 
 //PhoneListCtrl.$inject = ['$scope', '$http'];

@@ -10,31 +10,32 @@
 </head>
 <body ng-controller="PhoneListCtrl">
 
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span2">
+  <div class="wrap">
+      <div class="span12">
         <!--Sidebar content-->
 
         Search: <input ng-model="query">
         Sort by:
-        <select ng-model="orderProp">
+        <select ng-model="sortOrder">
           <option value="name">Alphabetical</option>
           <option value="age">Newest</option>
         </select>
 
       </div>
-      <div class="span10">
-        <!--Body content-->
-
-        <ul class="phones">
-          <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-            {{phone.name}}
-            <p>{{phone.snippet}}</p>
-          </li>
-        </ul>
-
+      <div class="span12">
+        <table id="contacts_table" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Phone Number</th>
+          </tr>
+          <tr ng-repeat="contact in contacts | filter:query | orderBy:sortOrder">
+            <td>{{contact.id}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.number}}</td>
+          </tr>
+        </table>
       </div>
-    </div>
   </div>
 
 </body>
