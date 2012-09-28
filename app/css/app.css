@@ -9,13 +9,59 @@ body {
 	margin: 0 auto;
 }
 
+header {
+	width: 600px;
+	margin: 0 auto 30px;
+	height: 50px;
+}
+
+.logo {
+	width: 200px;
+    height: 50px;
+    float:left;
+}
+
+.logo > a {
+	display: block;
+    background-image: url(/app/img/practo-logo.png);
+    height: 46px;
+    width: 200px;
+    text-indent: -99999px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+header h2 {
+	padding: 0 0 0 171px;
+    float: left;
+    font: bold 30px Arial;
+    color: #60CCF4;
+}
+
 .data-arrange {
 	width: 600px;
-	margin: 20px auto;
+	margin: 20px auto -10px;
+	clear: both;
 }
 
 .data-arrange input, .data-arrange select {
-	margin: 0px 12px 0px 12px;
+	margin-top: 5px;
+}
+
+.data-arrange select {
+	cursor: pointer;
+}
+
+.data-arrange span:first-child {
+	float:left;
+}
+
+.data-arrange span:last-child {
+	float:right;
+}
+
+.data-arrange label {
+	display: inline;
 }
 
 #contacts_table {
@@ -47,14 +93,17 @@ body {
 	background-color: #EEE;
 }
 
-#contacts_table td:nth-child(1) {
+#contacts_table td:nth-child(1),
+#contacts_table th:nth-child(1) {
 	width:10%;
 }
 
-#contacts_table td:nth-child(2) {
+#contacts_table td:nth-child(2),
+#contacts_table th:nth-child(2) {
 	width:60%;
 }
 
-#contacts_table td:nth-child(3) {
+#contacts_table td:nth-child(3),
+#contacts_table th:nth-child(3) {
 	width:30%;
 }

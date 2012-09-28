@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Practo Contacts App</title>
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="lib/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
 </head>
@@ -12,13 +12,24 @@
 
   <div class="wrap">
       <div class="span12">
+        <header>
+          <h1 class="logo">
+            <a href="http://www.practo.com">Practo</a>
+          </h1>
+          <h2>Contact Finder</h2>
+        </header>
         <div class="data-arrange">
-          Search: <input ng-model="query">
-          Sort by:
-          <select ng-model="sortOrder">
-            <option value="name">Alphabetical</option>
-            <option value="id">Serial</option>
-          </select>
+          <span>
+            <label for="query">Search:</label>
+            <input id="query" name="query" ng-model="query">
+          </span>
+          <span>
+            <label for="sort-order">Sort by:</label>
+            <select id="sort-order" name="sort-order" ng-model="sortOrder">
+              <option value="name">Alphabetical</option>
+              <option value="id">Serial</option>
+            </select>
+          </span>
         </div>
       </div>
       <div class="span12">
