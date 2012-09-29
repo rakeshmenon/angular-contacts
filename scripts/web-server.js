@@ -56,6 +56,7 @@ HttpServer.prototype.handleRequest_ = function(req, res) {
   {
     manifesto.fetch('./contacts.appcache', '.', function(err, data) {
       if (err) {
+        console.log("ERROR")
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.end('Something went wrong\n');
         return;
