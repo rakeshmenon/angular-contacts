@@ -6,6 +6,7 @@ css/app.css
 css/bootstrap.min.css
 lib/angular/angular.js
 js/controllers.js
+js/cacheUpdate.js
 img/practo-logo.png
 index.html
 
