@@ -54,10 +54,8 @@ HttpServer.prototype.parseUrl_ = function(urlString) {
 HttpServer.prototype.handleRequest_ = function(req, res) {
   if (req.url.indexOf('contacts.appcache') !== -1)
   {
-    console.log("MANIFEST REQUEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     manifesto.fetch('./contacts.appcache', '.', function(err, data) {
       if (err) {
-        console.log("MANIFEST ERROR FETCHING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.end('Something went wrong\n');
         return;
