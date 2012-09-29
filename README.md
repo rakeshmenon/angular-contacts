@@ -7,11 +7,11 @@ Instructions for setup:
 ----------------------
 
 1. Clone this repository:
-   git clone git@github.com:rakeshmenon/angular-contacts.git
+   *git clone git@github.com:rakeshmenon/angular-contacts.git*
 
 2. Install [NodeJS](http://nodejs.org)
 
-3. Go inside angular-contacts/app/
-   Execute: node scripts/web-server.js
+3. Go inside angular-contacts/app/:  
+   Execute: *node scripts/web-server.js*
 
 
