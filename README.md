@@ -1,4 +1,4 @@
-Simple Contacts Aplication using AngularJS
+Simple Contacts Application using AngularJS
 ==========================================
 
 Requirements: node 0.8.\*, npm 1.1.\*, manifesto 0.0.4
