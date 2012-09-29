@@ -71,6 +71,11 @@ header h2.headtext {
 /* END OF HEADER CSS */
 
 /* CONTACTS TABLE */
+
+a.refresh-btn {
+    margin: 17px 0 -17px 700px;
+}
+
 #contacts_table {
 	width: 600px;
 	text-align: left;
