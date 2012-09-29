@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+CACHE:
+css/app.css
+css/bootstrap.min.css
+lib/angular/angular.js
+js/controllers.js
+img/practo-logo.png
+
+NETWORK:
+contacts/contacts.json

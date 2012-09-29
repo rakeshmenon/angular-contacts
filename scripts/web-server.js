@@ -4,7 +4,8 @@ var sys = require('sys'),
     http = require('http'),
     fs = require('fs'),
     url = require('url'),
-    events = require('events');
+    events = require('events'),
+    manifesto = require("manifesto");
 
 var DEFAULT_PORT = process.env.PORT || 5000;
 
@@ -51,18 +52,34 @@ HttpServer.prototype.parseUrl_ = function(urlString) {
 };
 
 HttpServer.prototype.handleRequest_ = function(req, res) {
-  var logEntry = req.method + ' ' + req.url;
-  if (req.headers['user-agent']) {
-    logEntry += ' ' + req.headers['user-agent'];
-  }
-  sys.puts(logEntry);
-  req.url = this.parseUrl_(req.url);
-  var handler = this.handlers[req.method];
-  if (!handler) {
-    res.writeHead(501);
-    res.end();
+  if (req.url.indexOf('contacts.appcache') !== -1)
+  {
+    console.log("MANIFEST REQUEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    manifesto.fetch('./contacts.appcache', '.', function(err, data) {
+      if (err) {
+        console.log("MANIFEST ERROR FETCHING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        res.writeHead(404, {'Content-Type': 'text/plain'});
+        res.end('Something went wrong\n');
+        return;
+      }
+
+      res.writeHead(200, {'Content-Type': 'text/cache-manifest'});
+      res.end(data);
+    });
   } else {
-    handler.call(this, req, res);
+    var logEntry = req.method + ' ' + req.url;
+    if (req.headers['user-agent']) {
+        logEntry += ' ' + req.headers['user-agent'];
+    }
+    sys.puts(logEntry);
+    req.url = this.parseUrl_(req.url);
+    var handler = this.handlers[req.method];
+    if (!handler) {
+        res.writeHead(501);
+        res.end();
+    } else {
+        handler.call(this, req, res);
+    }
   }
 };
 
