@@ -62,7 +62,7 @@ HttpServer.prototype.handleRequest_ = function(req, res) {
         res.end('Something went wrong\n');
         return;
       }
-
+      console.log(data);
       res.writeHead(200, {'Content-Type': 'text/cache-manifest'});
       res.end(data);
     });

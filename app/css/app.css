@@ -35,7 +35,7 @@ header {
     background-repeat: no-repeat;
 }
 
-header h2 {
+header h2.headtext {
 	padding: 0 0 0 171px;
     float: left;
     font: bold 30px Arial;

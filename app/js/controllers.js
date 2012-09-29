@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var PhoneListCtrl = function($scope, $http) {
+var ContactControl = function($scope, $http) {
   $http.get('contacts/contacts.json').success(function (data) {
     $scope.contacts = data;
     window.localStorage.setItem("data", JSON.stringify(data));
