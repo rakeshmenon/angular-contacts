@@ -4,6 +4,7 @@
   "dependencies": {
      "manifesto": "0.0.4"
   },
+  
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
