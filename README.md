@@ -1,6 +1,8 @@
 Simple Contacts Application using AngularJS
 ==========================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rakeshmenon/angular-contacts.svg)](https://greenkeeper.io/)
+
 Requirements: node 0.8.\*, npm 1.1.\*, manifesto 0.0.4
 
 Instructions for setup:
